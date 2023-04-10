@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-for number in range(0, 9):
-    for numbers in range(number + 1, 10):
-        if number == 8:
-            print("{}{}".format(number, numbers))
-        else:
-            print("{}{}".format(number, numbers), end=", ")
+
+
+def print_uniq_combos():
+    for i in range(10):
+        for j in range(i + 1, 10):
+            if i == 8 and j == 9:
+                print('{:d}{:d}'.format(i, j))
+            else:
+                print('{:d}{:d}'.format(i, j), end=', ')
+
+
+if _name_ == '_main_':
+    print_uniq_combos()
