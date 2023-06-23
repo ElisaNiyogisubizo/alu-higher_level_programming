@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-for number in range(0, 9):
-    for numbers in range(number + 1, 10):
-        if number == 8:
-            print("{}{}".format(number, numbers))
+"""prints all possible different combinations of two digits.
+    01 and 10 are considered the same combination of the two digits 0 and 1
+    i represents first digit and j represent second digit
+    """
+for i in range(10):
+    for j in range(i + 1, 10):
+        if i == 8 and j == 9:
+            print("{}{}".format(i, j))
         else:
-            print("{}{}".format(number, numbers), end=", ")
+            print("{}{}".format(i, j), end=", ")
